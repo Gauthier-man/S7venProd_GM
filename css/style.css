@@ -1,0 +1,345 @@
+/* Palette de couleurs */
+:root {
+    --vert-fluo: #c5fd00;
+    --vert-fonce: #1f1f17;
+    --noir: #000000;
+    --gris-clair: #333333;
+    --blanc: #ffffff;
+}
+
+
+body {
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    /* padding: 0;
+    background-color: var(--noir);
+    color: var(--blanc); */
+}
+    
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fixe le header en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    z-index: 10; /* S'assure que le header reste au-dessus des autres éléments */
+    color: var(--blanc);
+    margin-top: 1rem;
+}
+
+
+
+    header img {
+        width: 143px;
+        /* height: 100px; */
+        object-fit: cover;
+        margin-right: 5rem;
+
+    }
+
+
+    nav ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin-left: 3rem;
+        font-family: 'Helvetica Neue', sans-serif;
+        color: #B3B3B3;
+
+                                                
+    }
+
+ /* Style de base */
+ .menu-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #b3b3b3;
+    margin-left: 2rem;
+  }
+  
+  .menu-item {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Place le sous-menu directement sous l'élément parent */
+    left: 0;
+    background-color: transparent; /* Pas de fond */
+    padding: 0; /* Enlève le padding */
+    margin: 0;
+    display: none; /* Caché par défaut */
+  }
+  
+  .submenu li {
+    margin: 0.5rem 0; /* Ajoute de l'espace entre les éléments */
+    font-size: 14px;
+    color: #b3b3b3; /* Même couleur que le menu principal */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+  }
+  
+  .menu-item:hover .submenu {
+    display: block; /* Affiche le sous-menu au survol */
+  }
+  
+  .menu-item:hover {
+    color: #fff; /* Change la couleur du texte parent au survol */
+  }
+  
+  
+  
+
+
+
+
+    #drop-down  img {
+           width: 100%;
+            height: 1300px;
+            display: block;
+            object-fit: cover;
+            filter: grayscale(30%) contrast(120%) saturate(1.5); /* Effet de désaturation partielle, contraste élevé et saturation accrue */
+            transition: filter 0.5s ease; /* Transition fluide pour l'effet */
+    }
+
+            /* Ajout d'un effet au survol */
+        #drop-down:hover img {
+        filter: grayscale(0%) contrast(100%) saturate(1); /* Réinitialiser les effets au survol */
+        }
+
+    #about {
+        position: relative;
+        text-align: center;
+      }
+      
+
+    #about img {
+        width: 100%;
+        height: 1300px;
+        display: block;
+        object-fit: cover;
+        position: relative;
+        filter: brightness(1) hue-rotate(10deg); /* Assombrir et ajouter un effet de teinte */
+    transition: filter 0.5s ease; /* Transition fluide pour l'effet */
+
+    }
+
+    #about::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); /* 0.3 est l'opacité de l'overlay */
+        z-index: 1; /* Assurez-vous que l'overlay est au-dessus de l'image */
+    }
+    
+    #about h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: Inter;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48.41px;
+        z-index: 2;
+    }
+
+    #about:hover img {
+        filter: brightness(1.1) hue-rotate(0deg); /* Revenir à l'état normal au survol */
+    }
+
+
+    #contact_us {
+        background-color: black;
+        height: 800px;
+    }
+
+    #contact_us h2 {
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 38.73px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: white;
+
+    }
+
+    span {
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 38.73px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #c5fd00;
+
+    }
+
+  /* Animation Shake */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.5s ease;
+}
+
+input, textarea {
+    width: 843px;
+    height: 72px;
+    border-radius: 1rem;
+    background-color: #6D6B6B;
+    border: none;
+    color: white;
+    margin-bottom: 1rem; /* Espacement entre les champs */
+    box-sizing: border-box;
+    border: 2px solid transparent;
+
+    padding: 20px;
+}
+
+textarea {
+    height: 184px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: white;
+    font-family: Inter;
+    font-weight: 200; 
+    /* padding-left: 1rem; */
+}
+
+
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: white;
+}
+
+button {
+    width: 520px;
+    height: 64px;
+    border-radius: 1rem;
+    border: none;
+    background-color: #c5fd00;
+    font-family: Inter, sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.6s ease, transform 0.4s ease;
+  }
+  
+  button:hover {
+    background-color: #a5e100; /* Changement de couleur au survol */
+    transform: translateY(-5px); /* Le bouton monte légèrement */
+  }
+  
+  button:active {
+    transform: translateY(0); /* Rétablissement de la position lors du clic */
+  }
+  
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #373737;
+    color: white;
+    padding: 2rem 7rem;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_content p {
+    /* width: 41%; */
+    width: 273px;
+    text-align: inherit;
+}
+
+.footer_content h2 {
+    font-family: Inter;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 38.73px;
+ 
+
+}
+
+a {
+    color: inherit;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+
+footer ul li {
+    list-style: none;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 3rem;
+   
+
+    
+}
+
+ul {
+    padding: 0;
+}
+ul li i {
+    margin-right: 10px; /* Ajoute de l'espace entre l'icône et le lien */
+  }
+
+  .footer_info h3 {
+    color: #c5fd00;
+    font-family: Inter;
+    font-size: 21px;
+    font-weight: 700;
+ 
+
+  }
+
+  footer p {
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 29.05px;
+    
+
+  }
+

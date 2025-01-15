@@ -1,0 +1,12 @@
+main {
+    background-color: black;
+    height: auto;
+}
+
+#video {
+
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 120vh;
+}

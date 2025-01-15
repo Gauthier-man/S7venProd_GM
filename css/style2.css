@@ -1,0 +1,48 @@
+#team_member {
+    overflow: hidden;
+}
+
+#team_member img {
+     width: 100%;
+     display: block;
+     height: 1300px;
+     object-fit: cover;
+}
+
+#team_member img {
+    transition: transform 1.2s ease-in-out; /* Zoom progressif lent */
+    transform: scale(1); /* Taille normale initiale */
+    transform-origin: center center;
+  }
+  
+  #team_member img:hover {
+    transition: transform 4s ease-in-out; /* Dézoom plus rapide */
+    transform: scale(1.05); /* Zoom à 120% */
+  }
+
+ #production {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
+
+}
+
+#production img {
+  display: block;
+  width: 100%;
+  height: 100%; /* Force l'image à occuper toute la cellule */
+  object-fit: cover; /* Gère l'adaptation de l'image */
+  
+  transition: transform 1.2s ease-in-out; /* Zoom progressif lent à l'état normal */
+  transform: scale(1); /* État initial */
+  transform-origin: center center; /* Zoom centré */
+}
+
+#production img:hover {
+    transition: transform 4s ease-in-out; /* Dézoom plus rapide */
+    transform: scale(1.05); /* Zoom à 105% au survol */
+}
+
+#production > * {
+  overflow: hidden; /* Empêche l'image de dépasser sa cellule lors du zoom */
+  height: 694px; /* Hauteur fixe pour chaque cellule */
+}
