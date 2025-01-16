@@ -8,5 +8,14 @@ main {
     display: flex;
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
-    height: 120vh;
+    height: 110vh;
+}
+
+
+@media screen and (max-width: 1920px) {
+
+    iframe {
+        width: 1600px;
+        height: 800px;
+    }
 }

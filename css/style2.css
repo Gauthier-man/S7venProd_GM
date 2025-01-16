@@ -46,3 +46,28 @@
   overflow: hidden; /* Empêche l'image de dépasser sa cellule lors du zoom */
   height: 694px; /* Hauteur fixe pour chaque cellule */
 }
+
+
+
+
+
+@media screen and (max-width: 1920px) {
+  #team_member img {
+  
+    height: 920px;
+  
+}
+
+#production img {
+  
+  height: 500px;
+ 
+}
+
+
+#production > * {
+  
+  height: inherit; 
+}
+
+}
