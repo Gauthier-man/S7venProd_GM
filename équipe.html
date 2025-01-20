@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css" class="css" />
     <link rel="stylesheet" href="./css/style2.css" class="css" />
     <script src="script.js" defer></script>
+    <script src="menu_burger.js" defer></script>
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -28,15 +29,21 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
   </head>
   <body>
     <header>
-      <nav class="menu">
+      <i class="fi fi-rr-menu-burger" id="burger-icon"></i>
+      <i class="fi fi-rr-cross-small" id="close-icon" style="display: none"></i>
+      <nav class="menu-responsive" id="menu">
         <ul class="menu-list">
           <li class="menu-item">
             ÉQUIPE
             <ul class="submenu">
-              <li><a href="#">MATTHIS BARTHE</a></li>
+              <li><a href="équipe.html">MATTHIS BARTHE</a></li>
               <li><a href="#">YANN HENRY</a></li>
             </ul>
           </li>
@@ -45,7 +52,8 @@
       </nav>
       <div>
         <a href="index.html">
-          <img src="images/logo/Plan de travail 2 copie 2@4x.png" alt="ceci est un logo" />
+          <img class="desktop-logo" src="images/logo/Plan de travail 2 copie 2@4x.png" alt="ceci est un logo" />
+          <img class="mobile-logo" src="images/logo/Plan de travail 7 copie 5@4x.png" alt="ceci est un logo mobile" />
         </a>
       </div>
     </header>

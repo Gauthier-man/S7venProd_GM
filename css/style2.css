@@ -71,3 +71,11 @@
 }
 
 }
+
+
+@media screen and (max-width: 650px) {
+  #production {
+    display: inherit; 
+    grid-template-columns: repeat(2, 1fr);
+}
+}
