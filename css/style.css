@@ -213,17 +213,26 @@ header {
     #contact_us {
         background-color: black;
         height: 800px;
+        
     }
 
     #contact_us h2 {
         font-family: Inter;
         font-size: 24px;
-        font-weight: 400;
+        font-weight: 800;
         line-height: 38.73px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
         color: white;
+        margin-bottom: 0.5rem;
+
+    }
+
+    #contact_us h3 {
+      font-family: Inter;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 4rem;
 
     }
 
@@ -318,10 +327,20 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    padding-top: 3rem;
+}
+
+hr {
+  height: 1px;
+  background-color: #666;
+  border: none;
+  margin: 0;
 }
 
 footer {
-    background-color: #373737;
+    /* background-color: #373737; */
+    background-color: black;
     color: white;
     padding: 2rem 7rem;
 }
@@ -335,6 +354,7 @@ footer {
     /* width: 41%; */
     width: 273px;
     text-align: inherit;
+    color: #CCCCCC;
 }
 
 .footer_content h2 {
@@ -350,6 +370,7 @@ a {
     color: inherit;
     list-style: none;
     text-decoration: none;
+    color: #b3b3b3;
 
 }
 
@@ -373,7 +394,8 @@ ul li i {
   }
 
   .footer_info h3 {
-    color: #c5fd00;
+    /* color: #c5fd00; */
+    color: white;
     font-family: Inter;
     font-size: 21px;
     font-weight: 700;
@@ -387,6 +409,8 @@ ul li i {
     font-size: 15px;
     font-weight: 400;
     line-height: 29.05px;
+
+   color: #CCCCCC;
     
 
   }
@@ -415,4 +439,182 @@ ul li i {
 
 }
 
+@media screen and (max-width: 941px) {
+    input, textarea {
+      width: 100%;
+    }
 
+    footer {
+      padding: 2rem 4rem;
+    }
+
+    .footer_content p {
+      font-size: 0.8rem;
+      width: 80%;
+    }
+
+    .footer_info {
+      width: 100%;
+    }
+
+    a {
+      font-size: 0.8rem;
+    }
+
+}
+
+/* Affiche le logo pour les grands écrans */
+.desktop-logo {
+  display: block;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+
+
+/* Styles de base */
+/* Styles de base pour le menu */
+
+#menu {
+
+  display: block;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 49%;
+  height: 100%;
+  color: white;
+ 
+  z-index: 1000; /* Assure que le menu est au-dessus */
+
+}
+
+
+.menu-list {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+.menu-item {
+  margin: 1rem 0;
+}
+
+.fi-rr-menu-burger,
+.fi-rr-cross-small {
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.fi-rr-menu-burger {
+  display: none;
+}
+
+.fi-rr-cross-small {
+  display: none;
+}
+
+/* Désactive la sélection de texte pour les icônes et le menu */
+#burger-icon,
+#close-icon,
+.menu-responsive {
+  user-select: none; /* Empêche la sélection de texte */
+  -webkit-user-select: none; /* Compatibilité pour Safari */
+  -ms-user-select: none; /* Compatibilité pour IE/Edge */
+}
+
+/* Optionnel : désactiver pour les items spécifiques */
+.menu-item,
+.menu-list {
+  user-select: none;
+}
+
+
+@media screen and (max-width: 650px) {
+
+  .menu-responsive {
+    display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 49%;
+     height: 100%;
+     color: white;
+     background-color: #000000;
+     z-index: 1000; /* Assure que le menu est au-dessus */
+   }
+
+   #menu {
+    display: none;
+   }
+   
+
+
+  .desktop-logo {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: block;
+    width: 60px;
+  }
+
+  .fi-rr-menu-burger {
+    display: block;
+  }
+
+  header {
+    margin-top: 0;
+  }
+
+  header img {
+    margin-right: 3rem;
+  }
+
+
+  button {
+    width: 60%;
+  }
+
+  .footer_container {
+    display: flex;
+    justify-content: inherit; 
+    flex-direction: column;
+}
+
+  #contact-form {
+    width: 80%;
+  }
+
+
+
+  .fi-rr-menu-burger {
+    display: block;
+    font-size: 1.5rem;
+
+  }
+
+  nav {
+    display: none;
+  }
+
+
+
+  .right-arrow {
+    display: none;
+  }
+
+  .left-arrow {
+    display: none;
+  }
+
+
+  .menu-list {
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+  
+}

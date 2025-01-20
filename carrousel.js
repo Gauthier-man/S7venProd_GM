@@ -70,5 +70,31 @@ function startAutoSlide() {
     }, 4000); // 4 secondes
 }
 
+
+// Détection des gestes tactiles
+container.addEventListener("touchstart", (event) => {
+    startX = event.touches[0].clientX; // Position initiale du toucher
+});
+
+container.addEventListener("touchmove", (event) => {
+    endX = event.touches[0].clientX; // Position pendant le mouvement
+});
+
+container.addEventListener("touchend", () => {
+    const diffX = startX - endX; // Différence entre la position initiale et finale
+
+    if (Math.abs(diffX) > 50) { // Seulement si le geste est significatif
+        if (diffX > 0) {
+            // Glissement vers la gauche (suivant)
+            nextImage();
+        } else {
+            // Glissement vers la droite (précédent)
+            prevImage();
+        }
+    }
+});
+
 // Lancer l'auto-défilement
 startAutoSlide();
+
+

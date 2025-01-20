@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css" class="css" />
     <script src="script.js" defer></script>
     <script src="carrousel.js" defer></script>
+    <script src="menu_burger.js" defer></script>
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -32,10 +33,20 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
   </head>
   <body>
     <header>
-      <nav class="menu">
+      <i class="fi fi-rr-menu-burger" id="burger-icon"></i>
+      <i class="fi fi-rr-cross-small" id="close-icon" style="display: none"></i>
+      <nav class="menu-responsive" id="menu">
         <ul class="menu-list">
           <li class="menu-item">
             ÉQUIPE
@@ -49,7 +60,8 @@
       </nav>
       <div>
         <a href="index.html">
-          <img src="images/logo/Plan de travail 2 copie 2@4x.png" alt="ceci est un logo" />
+          <img class="desktop-logo" src="images/logo/Plan de travail 2 copie 2@4x.png" alt="ceci est un logo" />
+          <img class="mobile-logo" src="images/logo/Plan de travail 7 copie 5@4x.png" alt="ceci est un logo mobile" />
         </a>
       </div>
     </header>
@@ -59,20 +71,24 @@
         <div class="carousel-container">
           <img
             class="carousel-image"
-            src="images/accueil/woman-making-beauty-vlog-with-her-professional-camera.jpg"
+            src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80"
             alt="Image 1"
           />
           <img
             class="carousel-image"
-            src="images/carrousel/male-videographer-editing-video-montage-post-production-software-working-computer-creating-movie-content-with-color-grading-edit-creative-multimedia-film-footage-app.jpg"
+            src="https://images.unsplash.com/photo-1518713550269-013046c65639?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Image 2"
           />
           <img
             class="carousel-image"
-            src="images/carrousel/african-american-man-sharing-addiction-story-with-group-people-aa-therapy-meeting-adult-having-conversation-with-psychologist-patients-circle-rehabilitation-session.jpg"
+            src="https://images.unsplash.com/photo-1489396160836-2c99c977e970?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Image 3"
           />
-          <img class="carousel-image" src="images/carrousel/FosTzuNX0AIde5j.jpg" alt="Image 4" />
+          <img
+            class="carousel-image"
+            src="https://images.unsplash.com/photo-1666114478797-d8d2fcb27677?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Image 4"
+          />
         </div>
         <i class="fi fi-ts-angle-small-right right-arrow"></i>
         <i class="fi fi-ts-angle-small-left left-arrow"></i>
@@ -87,8 +103,10 @@
       </section>
       <section id="contact_us">
         <div class="contact-section">
-          <h2>Vous avez un <span class="highlight">projet vidéo</span> ?</h2>
-          <h2>Contactez<span class="highlight"> Nous</span></h2>
+          <h2>Vous avez un projet vidéo ?</h2>
+          <h3>Contactez Nous</h3>
+          <!-- <h2>Vous avez un <span class="highlight">projet vidéo</span> ?</h2>
+          <h2>Contactez<span class="highlight"> Nous</span></h2> -->
           <!-- <p>
             <a href="#contact-form" class="contact-link">Contactez <span class="highlight">Nous</span></a>
           </p> -->
@@ -102,14 +120,12 @@
         </div>
       </section>
     </main>
+    <hr />
     <footer>
       <div class="footer_container">
         <div class="footer_content">
           <h2>s7venprod</h2>
-          <p>
-            Nous transformons vos idées en chefs-d'œuvre visuels. Notre passion pour l'innovation et la créativité guide
-            chacun de nos projets
-          </p>
+          <p>Nous transformons vos idées en chefs-d'œuvre visuels.</p>
         </div>
         <div class="footer_info">
           <h3>Contact</h3>
@@ -118,13 +134,13 @@
             <li><i class="fi fi-ss-envelope"></i> <a href="mailto:contact@sevenprod.fr">contact@sevenprod.fr</a></li>
           </ul>
         </div>
-        <div class="footer_info">
+        <!-- <div class="footer_info">
           <h3>Navigation</h3>
           <ul>
             <li><a href="#">Équipe</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-        </div>
+        </div> -->
         <div class="footer_info">
           <h3>Suivez-nous</h3>
           <ul>
