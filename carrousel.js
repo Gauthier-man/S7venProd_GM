@@ -98,4 +98,4 @@ container.addEventListener("touchend", () => {
 startAutoSlide();
 
 
-//Commentaire en plus dzqdqzdqzdqzd
+//Commentaire en plus dzqdqzdqzdqzd dzqdqz
