@@ -69,6 +69,16 @@ header {
     position: relative;
     cursor: pointer;
   }
+
+  .menu-item {
+    border-bottom: 1px solid transparent; /* Bordure invisible par défaut */
+    padding-bottom: 0.5rem; /* Ajoutez le même padding par défaut */
+    box-sizing: border-box;
+}
+
+.menu-item:hover {
+    border-bottom-color: white; /* Change la couleur au survol */
+}
   
   .submenu {
     list-style: none;
@@ -79,6 +89,11 @@ header {
     padding: 0; /* Enlève le padding */
     margin: 0;
     display: none; /* Caché par défaut */
+  }
+
+
+  .submenu a {
+    color: white;
   }
   
   .submenu li {
@@ -94,6 +109,39 @@ header {
   
   .menu-item:hover {
     color: #fff; /* Change la couleur du texte parent au survol */
+    border-bottom: 1px solid white;
+    /* margin-bottom: 2rem; */
+    padding-bottom: 0.5rem;
+  }
+  .carousel-title {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem; /* Ajuste la taille du texte */
+    color: white; /* Choisir une couleur qui contraste avec l'image */
+    font-weight: bold;
+    z-index: 10; /* Assurez-vous que le texte soit au-dessus des images */
+
+    font-family: Inter;
+    font-size: 92px;
+    font-weight: 500;
+    line-height: 116.18px;
+  
+    
+
+  }
+
+
+
+  .title-underline {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 238px;
+    border-bottom: 1px solid white;
+    z-index: 10;
   }
  
   
@@ -109,7 +157,14 @@ header {
     object-fit: cover;
     display: block;
     opacity: 1;
+    filter: brightness(50%); 
     transition: transform 0.5s ease; /* Animation du glissement */
+  }
+
+  .carousel-image {
+
+    filter: brightness(80%); /* Assombrit les images en réduisant la luminosité */
+  
   }
   
   #drop-down .fi {
@@ -159,10 +214,7 @@ header {
 
   
 
-            /* Ajout d'un effet au survol */
-        #drop-down:hover img {
-        filter: grayscale(0%) contrast(100%) saturate(1); /* Réinitialiser les effets au survol */
-        }
+    
 
     #about {
         position: relative;
@@ -424,7 +476,9 @@ ul li i {
     object-fit: cover;
 }
 
-
+.title-underline {
+    top: 60%;
+}
 
 #about img {
     width: 100%;
@@ -534,6 +588,21 @@ ul li i {
 
 
 @media screen and (max-width: 650px) {
+
+
+  .carousel-title {
+    font-size: 51px;
+
+  }
+
+  .title-underline {
+    width: 144px;
+    top: 53%;
+  }
+
+ 
+
+
 
   .menu-responsive {
     display: none;
