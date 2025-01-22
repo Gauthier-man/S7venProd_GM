@@ -1,24 +1,41 @@
 #team_member {
-    overflow: hidden;
+  position: relative; /* Permet de positionner le titre par rapport à la section */
+  overflow: hidden; /* Empêche tout débordement */
 }
 
 #team_member img {
-     width: 100%;
-     display: block;
-     height: 1300px;
-     object-fit: cover;
+  width: 100%;
+  display: block;
+  height: auto; /* Ajuste la hauteur proportionnellement à la largeur */
+  object-fit: cover;
+  transition: transform 1.2s ease-in-out; /* Zoom progressif lent */
+  transform: scale(1); /* Taille normale initiale */
+  transform-origin: center center;
 }
 
-#team_member img {
-    transition: transform 1.2s ease-in-out; /* Zoom progressif lent */
-    transform: scale(1); /* Taille normale initiale */
-    transform-origin: center center;
-  }
-  
-  #team_member img:hover {
-    transition: transform 4s ease-in-out; /* Dézoom plus rapide */
-    transform: scale(1.05); /* Zoom à 120% */
-  }
+#team_member img:hover {
+  transition: transform 4s ease-in-out; /* Dézoom plus rapide */
+  transform: scale(1.05); /* Zoom à 105% */
+}
+
+#team_member h1 {
+  position: absolute;
+  top: 82px;
+  left: 16px;
+  color: white; /* Texte en blanc */
+  padding: 10px 20px; /* Espacement autour du texte */
+  border-radius: 5px; /* Bords arrondis */
+  font-size: 2rem; /* Taille de police */
+  text-align: left; /* Aligne le texte à gauche */
+  z-index: 1; /* Assure que le texte est affiché au-dessus de l'image */
+  white-space: nowrap; /* Empêche le texte de se couper en plusieurs lignes */
+
+  font-family: "Abel", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 
  #production {
   display: grid;
@@ -50,6 +67,40 @@
 
 
 
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  font-family: "Abel", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  margin-left: 2rem;
+
+}
+
+
+#menu h1 {
+
+  position: fixed;
+  top: 100px;
+  left: 50px;
+  z-index: 3;
+  font-size: 30px;
+    font-family: "Abel", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+#team_item {
+
+  border-bottom: 1px solid white;
+    padding-bottom: 0.5rem;
+}
+
 
 @media screen and (max-width: 1920px) {
   #team_member img {
@@ -57,6 +108,8 @@
     height: 920px;
   
 }
+
+
 
 #production img {
   
@@ -73,9 +126,32 @@
 }
 
 
+
+
 @media screen and (max-width: 650px) {
   #production {
     display: inherit; 
     grid-template-columns: repeat(2, 1fr);
 }
+
+.menu-list {
+  margin-top: 3rem;
+  flex-direction: column;
+  width: 54px;
+}
+
+#menu h1 {
+
+ display: none;
+}
+
+#team_item {
+  width: 46px;
+}
+
+a {
+  font-size: 1rem;
+ 
+}
+
 }

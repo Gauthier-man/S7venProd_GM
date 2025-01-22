@@ -44,12 +44,7 @@ menuItems.forEach((item) => {
     });
 
     // Gestion du menu sur mobile : affichage au clic
-    item.addEventListener('click', () => {
-      if (window.matchMedia("(max-width: 650px)").matches) {
-        const isDisplayed = submenu.style.display === 'block';
-        submenu.style.display = isDisplayed ? 'none' : 'block';
-      }
-    });
+    
   }
 });
 

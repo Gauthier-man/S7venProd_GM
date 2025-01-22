@@ -7,6 +7,9 @@
     --blanc: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
     /* font-family: Arial, sans-serif; */
@@ -60,9 +63,15 @@ header {
     gap: 2rem;
     padding: 0;
     margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: "Abel", serif;
+    font-weight: 400;
+    font-style: normal;
     color: #b3b3b3;
     margin-left: 2rem;
+  }
+
+  .menu-item a:hover {
+    color: white;
   }
   
   .menu-item {
@@ -101,6 +110,9 @@ header {
     font-size: 14px;
     color: #b3b3b3; /* Même couleur que le menu principal */
     white-space: nowrap; /* Empêche le retour à la ligne */
+    font-family: "Abel", serif;
+    font-weight: 400;
+    font-style: normal;
   }
   
   .menu-item:hover .submenu {
@@ -113,6 +125,12 @@ header {
     /* margin-bottom: 2rem; */
     padding-bottom: 0.5rem;
   }
+
+  .menu-item.active {
+    color: white; /* Couleur du texte en blanc */
+    border-bottom: 1px solid white; /* Surlignage en blanc */
+}
+
   .carousel-title {
     position: absolute;
     top: 44%;
@@ -195,6 +213,25 @@ header {
   #drop-down .left-arrow {
     left: 40px;
   }
+
+
+  #drop-down .fi-ss-angle-down {
+    position: absolute;
+    bottom: 20px; /* Distance depuis le bas du carousel */
+    left: 50%; /* Centrer horizontalement */
+    transform: translateX(-50%); /* Correction pour aligner le centre de l'élément */
+    font-size: 73px;
+    color: #96989f;
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.3s ease;
+  }
+  
+  #drop-down .fi-ss-angle-down:hover {
+    transform: translateX(-50%) translateY(5px); /* Ajoute une animation au survol */
+    color: white;
+  }
+
   
   .carousel-container {
     display: flex; /* Alignement horizontal des images */
@@ -546,11 +583,11 @@ ul li i {
 }
 
 
-.menu-list {
+/* .menu-list {
   list-style: none;
   padding: 1rem;
   margin: 0;
-}
+} */
 
 .menu-item {
   margin: 1rem 0;
