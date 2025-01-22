@@ -72,6 +72,7 @@ header {
 
   .menu-item a:hover {
     color: white;
+    transition: color 0.4s ease;
   }
   
   .menu-item {
@@ -103,7 +104,10 @@ header {
 
   .submenu a {
     color: white;
+    
   }
+
+ 
   
   .submenu li {
     margin: 0.5rem 0; /* Ajoute de l'espace entre les éléments */
@@ -124,6 +128,7 @@ header {
     border-bottom: 1px solid white;
     /* margin-bottom: 2rem; */
     padding-bottom: 0.5rem;
+    transition: color 0.4s ease;
   }
 
   .menu-item.active {
