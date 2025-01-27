@@ -220,22 +220,42 @@ header {
   }
 
 
-  #drop-down .fi-ss-angle-down {
+  #drop-down .fi-ts-angle-down{
     position: absolute;
-    bottom: 20px; /* Distance depuis le bas du carousel */
+    bottom: 40px; /* Distance depuis le bas du carousel */
     left: 50%; /* Centrer horizontalement */
     transform: translateX(-50%); /* Correction pour aligner le centre de l'élément */
-    font-size: 73px;
+    font-size: 45px;
     color: #96989f;
     cursor: pointer;
     z-index: 5;
     transition: transform 0.3s ease;
-  }
+    animation: bounce 2s infinite;
+}
+
+/* Important : Annuler les propriétés héritées de la classe générique */
+#drop-down .fi-ts-angle-down {
+    top: auto; /* Annule top: 50% */
+    transform: translateX(-50%); /* Retire translateY(-50%) */
+}
   
-  #drop-down .fi-ss-angle-down:hover {
+  #drop-down .fi-ts-angle-down:hover {
     transform: translateX(-50%) translateY(5px); /* Ajoute une animation au survol */
     color: white;
   }
+
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0); /* Position initiale et finale */
+  }
+  50% {
+      transform: translateX(-50%) translateY(10px); /* Descente subtile */
+  }
+}
+
+
+
 
   
   .carousel-container {
@@ -533,6 +553,14 @@ ul li i {
 }
 
 
+#drop-down .fi-ts-angle-down{
+
+  bottom: 20px; /* Distance depuis le bas du carousel */
+
+ 
+}
+
+
 }
 
 @media screen and (max-width: 941px) {
@@ -632,6 +660,10 @@ ul li i {
 @media screen and (max-width: 650px) {
 
 
+
+
+
+
   .carousel-title {
     font-size: 51px;
 
@@ -643,8 +675,23 @@ ul li i {
   }
 
  
+  .menu-list {
+    margin-top: 3rem;
+    flex-direction: column;
+    width: 54px;
+  }
 
+  #team_item {
+    width: 46px;
 
+   
+  }
+
+  .menu-item a {
+    font-size: 1rem;
+   
+  }
+  
 
   .menu-responsive {
     display: none;
@@ -728,4 +775,8 @@ ul li i {
     flex-direction: column;
   }
   
+
+
+
+
 }
